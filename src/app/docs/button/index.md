@@ -3,10 +3,6 @@
 A button is an interface element that allows the user to perform a specific
 action when clicked.
 
-## Play with it
-
-{{ NgDocActions.playground("ButtonPlayground") }}
-
 ## Importing a button
 
 {% include "../shared/import-alert.md" %}
@@ -23,6 +19,7 @@ export class AppModule {}
 ```
 
 ## Creating a button
+
 To create a button using our library, you can use the following code:
 
 ```html
@@ -30,6 +27,8 @@ To create a button using our library, you can use the following code:
 ```
 
 This will create a simple button with the text "MyButton" on it.
+
+{{ NgDocActions.demo("ButtonDemoComponent") }}
 
 ## Styling a button
 
@@ -42,8 +41,6 @@ button {
 }
 ```
 
-## Example of usage
+## Play with it
 
-{{ NgDocActions.demo("ButtonDemoComponent") }}
-
-
+{{ NgDocActions.playground("ButtonPlayground") }}
