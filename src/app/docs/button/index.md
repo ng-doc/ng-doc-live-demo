@@ -18,7 +18,9 @@ import {ButtonModule} from 'my-lib'
 export class MyModule {}
 ```
 
-## Example
+## Example of usage
+
+You can easily use this button with the native `button` tag
 
 {{ NgDocActions.demo("ButtonDemoComponent") }}
 
