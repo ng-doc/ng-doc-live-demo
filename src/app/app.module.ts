@@ -1,4 +1,4 @@
-import { NgDocModule } from '@ng-doc/app';
+import { NgDocModule, NG_DOC_DARK_PURPLE_THEME } from '@ng-doc/app';
 import { NG_DOC_ROUTING, NgDocGeneratedModule } from '@ng-doc/generated';
 import { RouterModule } from '@angular/router';
 import { NgDocSidebarModule } from '@ng-doc/app/components/sidebar';
@@ -15,8 +15,11 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     NgDocNavbarModule,
     NgDocSidebarModule,
-    RouterModule.forRoot(NG_DOC_ROUTING),
-    NgDocModule.forRoot(),
+    RouterModule.forRoot([
+      { path: '', redirectTo: 'docs/button', pathMatch: 'full' },
+      ...NG_DOC_ROUTING,
+    ]),
+    NgDocModule.forRoot({ defaultThemeId: NG_DOC_DARK_PURPLE_THEME.id }),
     NgDocGeneratedModule.forRoot(),
   ],
   providers: [],

@@ -4,57 +4,57 @@
   border-radius: 4px;
   cursor: pointer;
 
-  &[data-rounded="true"] {
+  &[data-rounded='true'] {
     border-radius: 20px;
   }
 
-  &[data-color="blue"] {
+  &[data-color='blue'] {
     background: blue;
     border: 1px solid blue;
     color: white;
   }
 
-  &[data-color="red"] {
+  &[data-color='red'] {
     background: red;
     border: 1px solid red;
     color: white;
   }
 
-  &[data-color="green"] {
+  &[data-color='green'] {
     background: green;
     border: 1px solid green;
     color: white;
   }
 
-  &app-button-outline {
-    &[data-color="blue"] {
+  &[app-button-outline] {
+    &[data-color='blue'] {
       background: white;
       border: 1px solid blue;
       color: blue;
     }
 
-    &[data-color="red"] {
+    &[data-color='red'] {
       background: white;
       border: 1px solid red;
       color: red;
     }
 
-    &[data-color="green"] {
+    &[data-color='green'] {
       background: white;
       border: 1px solid green;
       color: green;
     }
   }
 
-  &[data-size="small"] {
+  &[data-size='small'] {
     font-size: 10px;
   }
 
-  &[data-size="medium"] {
+  &[data-size='medium'] {
     font-size: 15px;
   }
 
-  &[data-size="large"] {
+  &[data-size='large'] {
     font-size: 20px;
   }
 }
