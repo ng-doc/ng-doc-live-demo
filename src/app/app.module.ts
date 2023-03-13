@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
     NgDocNavbarModule,
     NgDocSidebarModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: 'docs/button', pathMatch: 'full' },
+      { path: '', redirectTo: 'button', pathMatch: 'full' },
       ...NG_DOC_ROUTING,
     ]),
     NgDocModule.forRoot({ defaultThemeId: NG_DOC_DARK_PURPLE_THEME.id }),
