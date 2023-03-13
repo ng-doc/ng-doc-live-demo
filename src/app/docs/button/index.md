@@ -3,6 +3,10 @@
 A button is an interface element that allows the user to perform a specific
 action when clicked.
 
+## Play with it
+
+{{ NgDocActions.playground("ButtonPlayground") }}
+
 ## Importing a button
 
 {% include "../shared/import-alert.md" %}
@@ -42,6 +46,4 @@ button {
 
 {{ NgDocActions.demo("ButtonDemoComponent") }}
 
-## Play with it
 
-{{ NgDocActions.playground("ButtonPlayground") }}
