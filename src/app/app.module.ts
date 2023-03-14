@@ -1,12 +1,12 @@
-import { NgDocModule, NG_DOC_DARK_PURPLE_THEME } from '@ng-doc/app';
-import { NG_DOC_ROUTING, NgDocGeneratedModule } from '@ng-doc/generated';
-import { RouterModule } from '@angular/router';
-import { NgDocSidebarModule } from '@ng-doc/app/components/sidebar';
-import { NgDocNavbarModule } from '@ng-doc/app/components/navbar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
+import {NgDocModule} from '@ng-doc/app';
+import {NG_DOC_ROUTING, NgDocGeneratedModule} from '@ng-doc/generated';
+import {RouterModule} from '@angular/router';
+import {NgDocSidebarModule} from '@ng-doc/app/components/sidebar';
+import {NgDocNavbarModule} from '@ng-doc/app/components/navbar';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppComponent} from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,8 +18,12 @@ import { AppComponent } from './app.component';
     RouterModule.forRoot([
       { path: '', redirectTo: 'button', pathMatch: 'full' },
       ...NG_DOC_ROUTING,
-    ]),
-    NgDocModule.forRoot({ defaultThemeId: NG_DOC_DARK_PURPLE_THEME.id }),
+    ], {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+      scrollOffset: [0, 70],
+    },),
+    NgDocModule.forRoot(),
     NgDocGeneratedModule.forRoot(),
   ],
   providers: [],
