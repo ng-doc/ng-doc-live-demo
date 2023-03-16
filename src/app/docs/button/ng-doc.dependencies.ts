@@ -1,7 +1,7 @@
 import {NgDocDependencies} from '@ng-doc/core';
 import {ButtonPageModule} from './ng-doc.module';
 import {ButtonDemoComponent} from './demos/button-demo.component';
-import {ButtonComponent} from '../../button/button.component';
+import {ButtonComponent} from '../../code/button/button.component';
 
 const ButtonDependencies: NgDocDependencies = {
 	module: ButtonPageModule,
