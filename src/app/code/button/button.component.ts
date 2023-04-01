@@ -1,4 +1,4 @@
-import {Component, HostBinding, Input} from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 /**
  * Button component with different colors, sizes and rounded corners.
@@ -28,7 +28,7 @@ import {Component, HostBinding, Input} from '@angular/core';
 @Component({
   selector: 'button[app-button], button[app-button-outline]',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
   /**
@@ -43,7 +43,7 @@ export class ButtonComponent {
    */
   @Input()
   @HostBinding('attr.data-rounded')
-  rounded = false;
+  rounded: boolean = false;
 
   /**
    * The size of the button.
