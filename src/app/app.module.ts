@@ -1,4 +1,5 @@
 import {
+  NG_DOC_NIGHT_THEME,
   NgDocDefaultSearchEngine,
   NgDocModule,
   provideSearchEngine,
@@ -30,7 +31,7 @@ import { AppComponent } from './app.component';
         scrollOffset: [0, 70],
       }
     ),
-    NgDocModule.forRoot(),
+    NgDocModule.forRoot({defaultThemeId: NG_DOC_NIGHT_THEME.id}),
     NgDocGeneratedModule.forRoot(),
   ],
   providers: [provideSearchEngine(NgDocDefaultSearchEngine)],

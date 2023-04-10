@@ -6,6 +6,7 @@ const Api: NgDocApi = {
     name: 'my-lib',
     route: 'my-lib',
     include: 'src/app/code/**/*.ts',
+    exclude: 'src/app/code/**/*.spec.ts'
   }],
 };
 
