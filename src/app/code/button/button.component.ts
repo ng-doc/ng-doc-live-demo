@@ -32,23 +32,30 @@ import { Component, HostBinding, Input } from '@angular/core';
 })
 export class ButtonComponent {
   /**
-   * The color of the button.
+   * Color of the button.
    */
   @Input()
   @HostBinding('attr.data-color')
-  color: 'blue' | 'red' | 'green' = 'blue';
+  color: 'primary' | 'accent' | 'warn' = 'primary';
 
   /**
-   * If true, the button will have rounded corners.
+   * Size of the button.
+   */
+  @Input()
+  @HostBinding('attr.data-size')
+  size: 'small' | 'medium' | 'large' = 'medium';
+
+  /**
+   * Whether the button should have rounded corners.
    */
   @Input()
   @HostBinding('attr.data-rounded')
   rounded: boolean = false;
 
   /**
-   * The size of the button.
+   * Whether the button should be disabled.
    */
   @Input()
-  @HostBinding('attr.data-size')
-  size: 'small' | 'medium' | 'large' = 'medium';
+  @HostBinding('attr.data-disabled')
+  disabled: boolean = false;
 }
