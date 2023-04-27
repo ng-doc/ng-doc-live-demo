@@ -1,15 +1,14 @@
 # {{ NgDocPage.title }}
 
-A button is an interface element that allows the user to perform a specific
-action when clicked.
+A button is an interface element that allows the user to perform a specific action when clicked.
 
 ## Importing a button
 
 {% include "../shared/import-alert.md" %}
 
-To use the button in your project, you need to import the `ButtonModule` from our library:
+To use the `ButtonComponent` in your project, you need to import the `ButtonModule` from our library:
 
-```typescript
+```typescript fileName="app.module.ts"
 import {ButtonModule} from 'my-lib';
 
 @NgModule({
@@ -23,7 +22,7 @@ export class AppModule {}
 To create a button using our library, you can use the following code:
 
 ```html
-<button app-button>MyButton</button>
+<button app-button>MyButton<button>
 ```
 
 This will create a simple button with the text "MyButton" on it.
@@ -41,6 +40,8 @@ button {
 }
 ```
 
-## Play with it
+## Playground
 
 {{ NgDocActions.playground("ButtonPlayground") }}
+
+<div id="end"></div>
