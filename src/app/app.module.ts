@@ -31,7 +31,7 @@ import { AppComponent } from './app.component';
         scrollOffset: [0, 70],
       }
     ),
-    NgDocModule.forRoot({defaultThemeId: NG_DOC_NIGHT_THEME.id}),
+    NgDocModule.forRoot({defaultThemeId: 'auto'}),
     NgDocGeneratedModule.forRoot(),
   ],
   providers: [provideSearchEngine(NgDocDefaultSearchEngine)],
