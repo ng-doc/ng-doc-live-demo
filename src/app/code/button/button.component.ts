@@ -29,6 +29,7 @@ import { Component, HostBinding, Input } from '@angular/core';
   selector: 'button[app-button], button[app-button-outline]',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
+  standalone: true,
 })
 export class ButtonComponent {
   /**
