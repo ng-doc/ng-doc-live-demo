@@ -23,7 +23,7 @@
     "@ng-doc/builder": "16.4.2",
     "@ng-doc/core": "16.4.2",
     "@ng-doc/ui-kit": "16.4.2",
-    "@ng-web-apis/common": "^2.1.0",
+    "@ng-web-apis/common": "^2.0.1",
     "@ngneat/until-destroy": "*",
     "@tinkoff/ng-polymorpheus": "4.0.11",
     "flex-controls": "^2.0.1",
