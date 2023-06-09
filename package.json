@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:analyze": "ng build -c development --stats-json --named-chunks && webpack-bundle-analyzer dist/ng-doc-live-demo/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -19,10 +20,10 @@
     "@angular/platform-browser": "^16.0.2",
     "@angular/platform-browser-dynamic": "^16.0.2",
     "@angular/router": "^16.0.2",
-    "@ng-doc/app": "16.4.2",
-    "@ng-doc/builder": "16.4.2",
-    "@ng-doc/core": "16.4.2",
-    "@ng-doc/ui-kit": "16.4.2",
+    "@ng-doc/app": "16.5.0",
+    "@ng-doc/builder": "16.5.0",
+    "@ng-doc/core": "16.5.0",
+    "@ng-doc/ui-kit": "16.5.0",
     "@ng-web-apis/common": "^2.1.0",
     "@ngneat/until-destroy": "*",
     "@tinkoff/ng-polymorpheus": "4.0.11",
@@ -30,12 +31,14 @@
     "rxjs": "~7.8.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.5.2",
+    "webpack-bundle-analyzer": "^4.9.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.0.2",
     "@angular/cli": "~16.0.2",
     "@angular/compiler-cli": "^16.0.2",
+    "@ng-doc/keywords-loaders": "^16.5.0",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
