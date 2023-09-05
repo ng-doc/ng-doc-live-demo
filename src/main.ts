@@ -18,13 +18,6 @@ import {provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
-    provideNgDocApp({
-      defaultThemeId: 'auto'
-    }),
-    provideNgDocContext(),
-    provideSearchEngine(NgDocDefaultSearchEngine),
-    providePageSkeleton(NG_DOC_DEFAULT_PAGE_SKELETON),
-    provideMainPageProcessor(NG_DOC_DEFAULT_PAGE_PROCESSORS),
     provideAnimations(),
     provideRouter([
       {path: '', redirectTo: 'button', pathMatch: 'full'},
@@ -33,6 +26,14 @@ bootstrapApplication(AppComponent, {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled'
     }),),
+    // NgDoc providers
+    provideNgDocApp({
+      defaultThemeId: 'auto'
+    }),
+    provideNgDocContext(),
+    provideSearchEngine(NgDocDefaultSearchEngine),
+    providePageSkeleton(NG_DOC_DEFAULT_PAGE_SKELETON),
+    provideMainPageProcessor(NG_DOC_DEFAULT_PAGE_PROCESSORS),
   ]
 })
   .catch(err => console.error(err));
