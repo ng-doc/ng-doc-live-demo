@@ -1,7 +1,38 @@
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {AppComponent} from './app/app.component';
+import {provideRouter, withInMemoryScrolling} from '@angular/router';
+import {provideAnimations} from '@angular/platform-browser/animations';
+import {bootstrapApplication} from '@angular/platform-browser';
+import {NG_DOC_ROUTING, provideNgDocContext} from '@ng-doc/generated';
+import {
+  NG_DOC_DEFAULT_PAGE_PROCESSORS,
+  NG_DOC_DEFAULT_PAGE_SKELETON,
+  NgDocDefaultSearchEngine,
+  provideMainPageProcessor,
+  provideNgDocApp,
+  providePageSkeleton,
+  provideSearchEngine
+} from '@ng-doc/app';
+import {provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 
-import {AppModule} from './app/app.module';
 
-
-platformBrowserDynamic().bootstrapModule(AppModule)
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+    provideNgDocApp({
+      defaultThemeId: 'auto'
+    }),
+    provideNgDocContext(),
+    provideSearchEngine(NgDocDefaultSearchEngine),
+    providePageSkeleton(NG_DOC_DEFAULT_PAGE_SKELETON),
+    provideMainPageProcessor(NG_DOC_DEFAULT_PAGE_PROCESSORS),
+    provideAnimations(),
+    provideRouter([
+      {path: '', redirectTo: 'button', pathMatch: 'full'},
+      ...NG_DOC_ROUTING,
+    ], withInMemoryScrolling({
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled'
+    }),),
+  ]
+})
   .catch(err => console.error(err));
